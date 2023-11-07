@@ -1,0 +1,244 @@
+@font-face {
+    font-family: valorant;
+    src: url(customfont/Valorant.ttf);
+  }
+
+
+:root {
+    --primary: blue;
+    --primary-dark: brown;
+    --greyLight-2: #d617b634;
+    --greyLight-3: #1ef70b;
+    --greyDark: blue;
+}
+h1 {
+    font-size: 2rem; /* Adjust the font size as needed */
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden; /* Prevent horizontal scroll */
+    background-color: aqua;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove default body margin */
+    background-image: url('fishes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.link {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    text-shadow: 0 0 2px brown;
+    box-shadow: 0.3rem 0.3rem 1rem blue, -0.2rem -0.2rem 0.5rem brown;
+    margin-right: 15px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    position: fixed;
+    top: 10px;
+    right: 8px;
+    transition: 0.3s ease-in;
+}
+
+.link:hover {
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: 26px;
+}
+
+.container {
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2296b9;
+    text-align: center;
+    position: relative;
+    transition: box-shadow 0.3s; /* Add a smooth transition for the box-shadow */
+}
+
+/* Add a box-shadow on hover */
+.container:hover {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow size and color as needed */
+    border-radius: 30px;
+}
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    background: rgba(34, 150, 185, 0.8); /* Adjust the alpha value (0.8) for transparency */
+    text-align: center;
+    border-radius: 30px;
+}
+
+.container p1 {
+
+  text-align: center;
+  font-family: valorant;
+  font-size: 30px;
+
+
+
+}
+
+.components,
+.components2 {
+    height: 60%;
+    border-radius: 3rem;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 4rem;
+    text-align: center;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.components2 {
+    display: none;
+}
+
+.wrapper {
+    width: inherit;
+    height: inherit;
+    grid-template-columns: repeat(auto-fit, min-content);
+    grid-template-rows: repeat(auto-fit, min-content);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    justify-items: center;
+    margin-bottom: 5%;
+}
+
+.btn {
+    height: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btn__primary {
+    background-color: rgb(9, 125, 192);
+    grid-column: 1/2;
+    grid-row: 3/5;
+    color: var(--greyLight-1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+.btn__primary:hover {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow size and color as needed */
+    border-radius: 30px;
+}
+
+.btn__secondary {
+    background-color: #dc9141;
+    grid-column: 2/2;
+    grid-row: 3/5;
+    color: black;
+    transition: 1s;
+}
+
+.btn__secondary:hover {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow size and color as needed */
+    border-radius: 30px;
+}
+
+.icon {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: grid;
+    justify-content: center;
+}
+
+.icon__add {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--greyDark);
+    transition: all 0.5s ease;
+}
+
+.icon__add:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+}
+
+.icon__add:hover {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        min-height: 20%;
+    }
+
+    .components,
+    .components2 {
+        width: 200px;
+        height: 200px;
+        padding: 4.5rem;
+    }
+
+    .icon2 .icon__add:hover {
+        cursor: pointer;
+        color: #d11a2a;
+    }
+}
+/* Button style */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white; /* Add a white border */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-link:hover {
+    background-color: transparent; /* Hover state, also transparent */
+    border: 1px solid var(--primary-dark); /* Change border color on hover */
+    color: var(--primary-dark); /* Change text color on hover */
+}
